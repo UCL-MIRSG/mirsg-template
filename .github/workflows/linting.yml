@@ -11,7 +11,7 @@ jobs:
   linting:
     runs-on: ubuntu-latest
     steps:
-      - uses: UCL-MIRSG/.github/actions/linting@v0.14.0
+      - uses: UCL-MIRSG/.github/actions/linting@v0.16.0
         with:
           ansible-roles-config: ./requirements.yml
           pre-commit-config: ./.pre-commit-config.yaml
