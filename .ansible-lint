@@ -1,2 +1,5 @@
 exclude_paths:
   - .github
+
+warn_list:
+  - yaml[indentation]
