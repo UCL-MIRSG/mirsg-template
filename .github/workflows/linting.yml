@@ -15,6 +15,7 @@ concurrency:
 
 jobs:
   linting:
+    if: github.event.pull_request.draft == false
     runs-on: ubuntu-latest
     steps:
       - uses: UCL-MIRSG/.github/actions/linting@v0.25.0
