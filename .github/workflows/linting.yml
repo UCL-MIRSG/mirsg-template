@@ -6,6 +6,11 @@ on:
       - main
       - "renovate/**"
   pull_request:
+    types:
+      - opened
+      - ready_for_review
+      - reopened
+      - synchronize
 
 concurrency:
   cancel-in-progress: true
@@ -22,5 +27,4 @@ jobs:
         with:
           ansible-roles-config: ./requirements.yml
           pre-commit-config: ./.pre-commit-config.yaml
-
 
