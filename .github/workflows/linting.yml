@@ -1,10 +1,11 @@
+---
 name: Linting
 
 on:
   push:
     branches:
       - main
-      - "renovate/**"
+      - renovate/**
   pull_request:
     types:
       - opened
@@ -23,7 +24,7 @@ jobs:
     if: github.event.pull_request.draft == false
     runs-on: ubuntu-latest
     steps:
-      - uses: UCL-MIRSG/.github/actions/linting@a4ee21851bcc006a7e2c198b4565f296313d27cf # v0.25.0
+      - uses: UCL-MIRSG/.github/actions/linting@6b08a270cd9c32028f964bda6b229368400e60a4 # v0.60.0
         with:
           ansible-roles-config: ./requirements.yml
           pre-commit-config: ./.pre-commit-config.yaml
