@@ -1,10 +1,11 @@
+---
 name: Linting
 
 on:
   push:
     branches:
       - main
-      - "renovate/**"
+      - renovate/**
   pull_request:
     types:
       - opened
