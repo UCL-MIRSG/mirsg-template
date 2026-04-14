@@ -8,8 +8,7 @@ on:
 
 jobs:
   add-issue-to-project:
-    permissions:
-      contents: read
+    permissions: {}
     runs-on: ubuntu-slim
     steps:
       - uses: UCL-MIRSG/.github/actions/add-to-project@48c110143818699bc1aeee69a6296d00550fd950 # v0
