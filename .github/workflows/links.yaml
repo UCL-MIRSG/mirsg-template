@@ -17,6 +17,8 @@ jobs:
     steps:
       - name: Check links
         uses: UCL-MIRSG/.github/actions/links@e4daf6da08d7b05e7442512fb07ae4c7d9bc1e99 # v0
+        env:
+          APP_PEM: ${{ secrets.LINKS_PRIVATE_KEY }}
         with:
           app-id: ${{ vars.LINKS_APP_ID }}
-          app-pem: ${{ secrets.LINKS_PRIVATE_KEY }} # zizmor: ignore[secrets-outside-env]
+          app-pem: ${{ env.APP_PEM }}
